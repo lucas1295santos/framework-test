@@ -12,5 +12,8 @@ Pod::Spec.new do |s|
     s.public_header_files = "kmmsharedmodule.framework/Headers/*.h"
     s.source_files = "kmmsharedmodule.framework/Headers/*.h"
     s.vendored_frameworks = "kmmsharedmodule.framework"
+    s.platform = :ios
+    s.swift_version = "4.2"
+    s.ios.deployment_target  = '12.0'
   s.platform = :ios
 end
