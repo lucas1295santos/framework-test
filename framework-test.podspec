@@ -9,6 +9,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/lucas1295santos/framework-test.git",
    :branch => "master",
     :tag => "1.0.0" }
-  s.source_files = "kmmsharedmodule.framework"
+    s.public_header_files = "kmmsharedmodule.framework/Headers/*.h"
+    s.source_files = "kmmsharedmodule.framework/Headers/*.h"
+    s.vendored_frameworks = "kmmsharedmodule.framework"
   s.platform = :ios
 end
