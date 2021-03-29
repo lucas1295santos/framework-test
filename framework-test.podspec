@@ -16,10 +16,3 @@ Pod::Spec.new do |s|
     s.swift_version = "4.2"
     s.ios.deployment_target  = '12.0'
 end
-
-post_install do |pi|
-  t = pi.pods_project.targets.find { |t| t.name == 'framework-test' }
-  t.build_configurations.each do |bc|
-    bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-  end
-end
